@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AndroidLabs</string>
+    <string name="hello_message">Bonjour le monde!</string>
+    <string name="ButtonText">Je suis un bouton</string>
+    <string name="login_name">S\'identifier</string>
+    <string name="pass_text">mot de passe</string>
+    <string name="whatDoesThisDo">Qu7\'est-ce que cela fait?</string>
+    <string name="raddioButton">Bouton Radio</string>
+    <string name="checkBox">Case à cocher</string>
+    <string name="login_Button">S\'identifier</string>
+
+    <string name="prompt_email">adresse courriels</string>
+    <string name="prompt_password">mot de passe (optional)</string>
+    <string name="action_sign_in">Connexion ou Inscription</string>
+    <string name="action_sign_in_short">se connecter</string>
+    <string name="error_invalid_email">Cette adresse courriels est invalide</string>
+    <string name="error_invalid_password">Ce mot de passe est trop court</string>
+    <string name="error_incorrect_password">Ce mot de passe est incorrect</string>
+    <string name="error_field_required">Ce champ est requis</string>
+    <string name="permission_rationale">"Les autorisations de contacts sont nécessaires pour fournir le courrier électronique finitions."
+    </string>
+    <string name="dialog_message">Voulez-vous terminer l\'activité?</string>
+    <string name="dialog_title">Terminer l\'activité</string>
+    <string name="ok">D\'accord</string>
+    <string name="cancel">Annuler</string>
+
+</resources>
