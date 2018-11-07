@@ -8,7 +8,6 @@
     <string name="raddioButton">Radio Button</string>
     <string name="checkBox">CheckBox</string>
     <string name="login_Button">Login</string>
-
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="action_sign_in">Sign in or register</string>
@@ -24,5 +23,14 @@
     <string name="dialog_title">Finish Activity</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
+    <string name="switchON">Switch ON</string>
+    <string name="switchOFF">Switch Off</string>
+    <string name="Information">My information to share</string>
+    <string name="startChat">Start Chat</string>
+    <string name="sendButton">Send</string>
+    <string name="chatHint">Type to Chat</string>
+    <string name="newText">new text</string>
+    <string name="contentDescription">pic</string>
+
 
 </resources>

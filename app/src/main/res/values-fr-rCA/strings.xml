@@ -24,5 +24,13 @@
     <string name="dialog_title">Terminer l\'activité</string>
     <string name="ok">D\'accord</string>
     <string name="cancel">Annuler</string>
+    <string name="Information">Mes informations à partager</string>
+    <string name="switchON">Allumer</string>
+    <string name="switchOFF">Éteindre</string>
+    <string name="startChat">Démarrer La Discussion</string>
+    <string name="sendButton">Envoyer</string>
+    <string name="chatHint">Tapez pour discuter</string>
+    <string name="newText">nouveau texte</string>
+    <string name="contentDescription">image</string>
 
 </resources>

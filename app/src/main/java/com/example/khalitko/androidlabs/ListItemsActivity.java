@@ -52,7 +52,7 @@ public class ListItemsActivity extends Activity {
 
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                Toast.makeText(ListItemsActivity.this, isChecked ? "Switch is On" : "Switch is Off", isChecked ? Toast.LENGTH_SHORT : Toast.LENGTH_LONG).show();
+                Toast.makeText(ListItemsActivity.this, isChecked ? R.string.switchON : R.string.switchOFF, isChecked ? Toast.LENGTH_SHORT : Toast.LENGTH_LONG).show();
 
             }
 
@@ -63,7 +63,9 @@ public class ListItemsActivity extends Activity {
 
             @Override
 
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            public void onCheckedChanged(CompoundButton buttonView, final boolean isChecked) {
+                if (checkBox.isChecked()) {
+
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(ListItemsActivity.this)
                         .setMessage(R.string.dialog_message)
@@ -72,38 +74,41 @@ public class ListItemsActivity extends Activity {
                         .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
 
 
+                            @Override
+                            public void onClick(DialogInterface dialog, int id) {
+                                String info = getResources().getString(R.string.Information);
+                                dialog.cancel();
+                                Intent resultIntent = new Intent();
+                                resultIntent.putExtra("Response", info);
+                                setResult(Activity.RESULT_OK, resultIntent);
+                                finish();
 
-                @Override
-                public void onClick(DialogInterface dialog, int id){
-                    dialog.cancel();
-                        Intent resultIntent = new Intent(  );
-                        resultIntent.putExtra("Response", "My information to share");
-                        setResult(Activity.RESULT_OK, resultIntent);
-                        finish();
+                            }
 
-                    }
-
-                })
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener(){
-                    @Override
-                    public void onClick(DialogInterface dialog, int id){
-                        dialog.cancel();
-                    }
-                });
+                        })
+                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int id) {
+//                        dialog.cancel();
+                                checkBox.setChecked(false);
+                            }
+                        });
 
                 AlertDialog alertDialog = builder.create();
                 alertDialog.show();
-                if (checkBox.isChecked()) {
-                    alertDialog.getButton(Dialog.BUTTON_POSITIVE).setEnabled(true);
-                    alertDialog.getButton(Dialog.BUTTON_NEGATIVE).setEnabled(true);
+
+            }
+//                if (checkBox.isChecked()) {
+//                    alertDialog.getButton(Dialog.BUTTON_POSITIVE).setEnabled(true);
+//                    alertDialog.getButton(Dialog.BUTTON_NEGATIVE).setEnabled(true);
 
 
-                }else {
+//                }else {
 
 //                    alertDialog.cancel();
 //                    checkBox.setSelected(false);
 //                    checkBox.toggle();
-                }
+//                }
 //                checkBox.toggle();
             }
 

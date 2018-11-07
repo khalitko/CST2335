@@ -8,7 +8,7 @@ import android.util.Log;
 public class ChatDatabaseHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "AndroidLabs";
-    public static final int VERSION_NUM = 3;
+    public static final int VERSION_NUM = 1;
     public static final String TABLE_NAME = "AndroidTable";
     public static final String KEY_ID = "Id";
     public static final String KEY_MESSAGE = "Message";
@@ -35,4 +35,8 @@ public class ChatDatabaseHelper extends SQLiteOpenHelper {
                 + newVersion);
     }
 
+    @Override
+    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        onUpgrade(db, oldVersion, newVersion);
+    }
 }

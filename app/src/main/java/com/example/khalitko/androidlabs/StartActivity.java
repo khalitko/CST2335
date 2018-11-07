@@ -12,6 +12,7 @@ public class StartActivity extends Activity {
     protected static final String ACTIVITY_NAME = "StartActivity";
 
     private Button button;
+    private Button startChat;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,21 +20,22 @@ public class StartActivity extends Activity {
         Log.i(ACTIVITY_NAME, "In onCreate()");
 
         button = findViewById(R.id.button);
+        startChat = findViewById(R.id.button2);
     }
 
     protected void clickHandler(View view){
         Intent intent = new Intent(StartActivity.this, ListItemsActivity.class);
         startActivityForResult(intent, 50);
+        onActivityResult(50,50,intent);
     }
 
     protected void onActivityResult(int requestCode, int responseCode, Intent data){
-        if (requestCode == 50) {
+        if (requestCode == 50 && responseCode == Activity.RESULT_OK) {
             Log.i(ACTIVITY_NAME, "Returned to StartActivity.onActivityResult");
-        }
-
-            Log.i(ACTIVITY_NAME, "Returned to StartActivity.onActivityResult -in request code ==  5");
             String messagePassed = data.getStringExtra("Response");
-            Toast.makeText(StartActivity.this, messagePassed,Toast.LENGTH_LONG).show();
+            Toast toast = Toast.makeText(this, messagePassed, Toast.LENGTH_LONG);
+            toast.show();
+        }
     }
 
 
@@ -67,4 +69,14 @@ public class StartActivity extends Activity {
         Log.i(ACTIVITY_NAME, "In onDestroy()");
     }
 
+    protected void startChat(View view){
+        Log.i(ACTIVITY_NAME, "User clicked Start Chat");
+        Intent intent = new Intent(StartActivity.this, ChatWindow.class);
+        startActivity(intent);
+    }
+
+    public void startWeatherActivity(View view) {
+        Log.i(ACTIVITY_NAME, "User Clicked Start Chat");
+        startActivityForResult(new Intent(this, WeatherActivity.class), 00);
+    }
 }
