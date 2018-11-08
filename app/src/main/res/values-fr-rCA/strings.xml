@@ -32,5 +32,10 @@
     <string name="chatHint">Tapez pour discuter</string>
     <string name="newText">nouveau texte</string>
     <string name="contentDescription">image</string>
+    <string name="startWeather">Météo</string>
+    <string name="currentTemp">Actuel</string>
+    <string name="lowTemp">Faible</string>
+    <string name="maxTemp">Haute</string>
+    <string name="windSpeed">Vent</string>
 
 </resources>

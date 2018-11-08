@@ -77,6 +77,6 @@ public class StartActivity extends Activity {
 
     public void startWeatherActivity(View view) {
         Log.i(ACTIVITY_NAME, "User Clicked Start Chat");
-        startActivityForResult(new Intent(this, WeatherActivity.class), 00);
+        startActivityForResult(new Intent(this, WeatherForecast.class), 00);
     }
 }

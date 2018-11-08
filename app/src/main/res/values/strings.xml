@@ -31,6 +31,11 @@
     <string name="chatHint">Type to Chat</string>
     <string name="newText">new text</string>
     <string name="contentDescription">pic</string>
+    <string name="startWeather">Weather</string>
+    <string name="currentTemp">Current</string>
+    <string name="lowTemp">Low</string>
+    <string name="maxTemp">High</string>
+    <string name="windSpeed">Wind</string>
 
 
 </resources>
